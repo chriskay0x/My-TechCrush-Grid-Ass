@@ -1,0 +1,195 @@
+:root{
+    --first-box-text: clamp(2.3rem, 3.5vw, 3rem);
+    --second-box-text: clamp(1.4rem, 2.3vw, 2.1rem);
+    --third-box-text: clamp(.7rem, 2vw, 1.3rem);
+}
+
+/*============================*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: DMSans;
+}
+@font-face {
+    font-family: DMSans;
+    src: url(DMSans-Medium.ttf);
+}
+@font-face {
+    font-family: DMSans;
+    src: url(DMSans-MediumItalic.ttf);
+    font-style: italic;
+}
+body{
+    background-color: #eee;
+    padding: 1.2rem;
+    height: 100vh;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(1fr, 1);
+    gap: 1.2rem;
+}
+.box{
+    width: 100%;
+    border-radius: .4rem;
+    padding: 1.6rem;
+    text-align: left;
+    line-height: 1;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*======== First Box =========*/
+.first-box{
+    background-color: #6348fc;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+}
+.first-text{
+    font-size: var(--first-box-text);
+    color: white;
+    margin-bottom: .4rem;
+}
+.star-review{
+    font-size: var(--third-box-text);
+    color: white;
+}
+/*======== End of First Box =========*/
+
+/*======== Second Box =========*/
+.second-box{
+    background-color: white;
+    overflow: hidden;
+}
+.second-text{
+    font-size: var(--second-box-text);
+    letter-spacing: 0;
+    text-align: left;
+    line-height: 1;
+}
+/*======== End of Second Box =========*/
+
+/*======== Third Box =========*/
+.third-box{
+    background-color: #FFCD6A;
+    overflow: hidden;
+
+}
+.third-text{
+    font-size: var(--second-box-text);
+    line-height: 1;
+}
+.spacing1{
+    padding: .4rem 0;
+}
+/*======== End of Third Box =========*/
+
+/*======== Fourth Box =========*/
+.fourth-box{
+    background-color: #d5b7e2;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+.fourth-text{
+    font-size: var(--second-box-text);
+    letter-spacing: 0;
+}
+.smaller-text{
+    font-size: var(--third-box-text);
+}
+/*======== End of Fouth Box =========*/
+
+/*======== Fifth Box =========*/
+.fifth-box{
+    background-color: #6348fc;
+}
+.fifth-text{
+    font-size: var(--second-box-text);
+    color: white;
+}
+/*======== End of Fifth Box =========*/
+
+/*======== Sixth Box =========*/
+.sixth-box{
+    background-color: white;
+}
+.sixth-text{
+    font-size: var(--first-box-text);
+}
+/*======== End of Sixth Box =========*/
+
+/*======== Seventh Box =========*/
+.seventh-box{
+    background-color: #fff4dd;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+.seventh-text{
+    font-size: var(--second-box-text);
+    line-height: 1;
+}
+/*======== End of Seventh Box =========*/
+
+/*======== Eight Box =========*/
+.eight-box{
+    background-color: #FFCD6A;
+}
+.eight-text{
+    font-size: var(--second-box-text);
+}
+
+/* ======= Responsiveness ========*/
+
+@media (min-width: 992px) {
+    body{
+        height: 100vh;
+    }
+    .container{
+        width: 75%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 70px 70px 70px 70px 70px
+        70px 70px 70px 70px 70px;
+    }
+    .seventh-box{
+        grid-area: 1/1/5/2;
+        display: flex;
+        flex-direction: column;
+        gap: .6rem;
+    }
+    .first-box{
+        grid-area: 1/2/4/4;
+    }
+    .fourth-box{
+        grid-area: 1/4/7/5;
+    }
+    .second-box{
+        grid-area: 4/2/7/3;
+    }
+    .third-box{
+        grid-area: 4/3/7/4;
+    }
+    .eight-box{
+        grid-area: 5/1/11/2;
+    }
+    .sixth-box{
+        grid-area: 7/2/11/3;
+    }
+    .fifth-box{
+        grid-area: 7/3/11/5;
+        display: flex;
+        column-gap: .3rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
